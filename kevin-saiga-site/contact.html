@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>문의 — KEVIN & SAIGA</title>
+  <meta name="description" content="도매, 콜라보, 고객 문의" />
+  <meta property="og:title" content="문의 — KEVIN & SAIGA" />
+  <meta property="og:description" content="도매, 콜라보, 고객 문의" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/assets/og.png" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="site-header container">
+    <a class="logo" href="/"><img src="/assets/logo-ks.svg" alt="KEVIN & SAIGA 로고"></a>
+    <nav class="nav">
+      <a href="/">홈</a>
+      <a href="/about.html">브랜드</a>
+      <a href="/lineup.html">굿즈</a>
+      <a href="/global.html">글로벌</a>
+      <a href="/contact.html" class="btn">문의</a>
+      <a class="lang" href="/en/">EN</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>문의하기</h1>
+    <p>도매/콜라보/일반 문의는 아래 양식으로 남겨주세요.</p>
+    <form class="card" name="contact" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="contact" />
+      <div class="field"><label for="name">이름</label><input id="name" name="name" required /></div>
+      <div class="field"><label for="email">이메일</label><input id="email" name="email" type="email" required /></div>
+      <div class="field"><label for="topic">유형</label>
+        <select id="topic" name="topic">
+          <option>도매/입점</option><option>콜라보 제안</option><option>일반 문의</option>
+        </select>
+      </div>
+      <div class="field"><label for="message">메시지</label><textarea id="message" name="message" rows="6" required></textarea></div>
+      <div class="field-inline"><label><input type="checkbox" name="consent" required /> 개인정보 수집·이용에 동의합니다.</label></div>
+      <button class="btn primary" type="submit">보내기</button>
+    </form>
+  </main>
+
+  <footer class="site-footer container">
+    <p>© <span id="year"></span> KEVIN & SAIGA — All Rights Reserved.</p>
+  </footer>
+  <script src="/script.js"></script>
+</body>
+</html>
